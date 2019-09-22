@@ -25,7 +25,7 @@ const mudarCor = () => {
     
   }
 
-  setInterval(typeWriter, 10000);
+  setTimeout(typeWriter, 1000);
   setInterval(mudarCor, 1000)
 
   return (
