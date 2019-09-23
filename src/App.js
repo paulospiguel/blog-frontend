@@ -6,7 +6,7 @@ import { ptBR } from 'date-fns/locale'
 
 const formatDate = format(
   new Date(),
-  "PPPPpp",
+  "PPPP",
   {locale: ptBR}
   );
 
@@ -45,10 +45,11 @@ const mudarCor = () => {
           do Paulo Spiguel
         </h1>
         <p className="titulo-principal">Em breve estarei publicado novidades. Fique ligado ...</p>
-        <p>{formatDate}</p>
+        
       </main>
       <footer className="App-footer">
-        <h3>P R Spiguel Tecnologia ME</h3>
+        <h2>P R Spiguel Tecnologia ME</h2>
+        <p>{formatDate}</p>
       </footer>
     </div>
   );
