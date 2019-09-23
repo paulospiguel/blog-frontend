@@ -1,7 +1,14 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale'
 
+const formatDate = format(
+  new Date(),
+  "PPPPpp",
+  {locale: ptBR}
+  );
 
 function App() {
  
@@ -30,14 +37,19 @@ const mudarCor = () => {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <header></header>
+      <main className="App-main">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>
           <strong id="color" className="red">Blog </strong>
           do Paulo Spiguel
         </h1>
         <p className="titulo-principal">Em breve estarei publicado novidades. Fique ligado ...</p>
-      </header>
+        <p>{formatDate}</p>
+      </main>
+      <footer className="App-footer">
+        <h3>P R Spiguel Tecnologia ME</h3>
+      </footer>
     </div>
   );
 }
