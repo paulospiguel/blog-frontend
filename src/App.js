@@ -1,8 +1,15 @@
 import React from "react";
-import logo from "./logo.svg";
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import logo from "./assets/imgFundo.png";
 import "./App.css";
 import { format } from 'date-fns';
-import { ptBR } from 'date-fns/locale'
+import { ptBR } from 'date-fns/locale';
+import Effect from './components/Effect';
+import Clock from './components/Clock';
+
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faInstagram, faLinkedin, faGithub, faFacebook} from '@fortawesome/fontawesome-free-brands';
 
 const formatDate = format(
   new Date(),
@@ -18,38 +25,36 @@ const mudarCor = () => {
  
   }; 
 
-  const typeWriter = () =>{
-    const elemento = document.querySelector(".titulo-principal");
-    const textoArray = elemento.innerHTML.split("");
-    elemento.innerHTML = " ";
-    
-    textoArray.forEach(function(letra, i){   
-      
-      setTimeout(function(){
-          elemento.innerHTML += letra;
-        }, 75 * i)
-      });
-    
-  }
-
-  setTimeout(typeWriter, 1000);
-  setInterval(mudarCor, 1000)
+  window.onload = setInterval(mudarCor, 1000);
 
   return (
     <div className="App">
       <header></header>
       <main className="App-main">
+        <div className="logoBlog">
+          <h2><b style={{color: "#09d3ac"}}>{"<"}</b>CODEFullStack<b style={{color: "#09d3ac"}}>{"/>"}</b></h2>
+          <p style={{color: "#09d3ac", marginLeft: 25}}>Knowledge</p>
+        </div>
+        <Clock />
         <img src={logo} className="App-logo" alt="logo" />
         <h1>
-          <strong id="color" className="red">Blog </strong>
-          do Paulo Spiguel
+          Blog em  
+          <strong id="color" className="red"> desenvolvimento</strong>
         </h1>
-        <p className="titulo-principal">Em breve estarei publicado novidades. Fique ligado ...</p>
-        
+        <p><Effect /></p>
+        <div className="redesSocias">
+          <Router>
+            <a href="https://www.facebook.com/paulospiguel" target="_blank" rel="noopener noreferrer" ><FontAwesomeIcon icon={faFacebook} /></a>
+            <a href="https://www.linkedin.com/in/paulo-spiguel" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a>
+            <a href="https://www.instagram.com/paulospiguel/?hl=pt"><FontAwesomeIcon icon={faInstagram} /></a>  
+            <a href="https://github.com/PauloSpiguel"><FontAwesomeIcon icon={faGithub} /></a>
+          </Router>  
+        </div> 
       </main>
       <footer className="App-footer">
-        <h2>P R Spiguel Tecnologia ME</h2>
-        <p>{formatDate}</p>
+        <h2>Paulo Roberto Spiguel</h2>
+        <p style={{color: "gray"}}>Desenvolverdor FullStack</p>
+        <h4>{formatDate}</h4>
       </footer>
     </div>
   );

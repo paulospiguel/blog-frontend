@@ -3,12 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free-brands": "^5.0.13",
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "date-fns": "^2.2.1",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.26",
     "react": "^16.9.0",
+    "react-clock": "^2.4.0",
     "react-dom": "^16.9.0",
+    "react-router-dom": "^5.1.0",
     "react-scripts": "3.1.2",
+    "react-typewriter-hook": "^1.0.1",
     "styled-components": "^4.3.2"
   },
   "scripts": {
@@ -31,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2"
   }
 }
