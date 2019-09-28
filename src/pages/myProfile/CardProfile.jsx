@@ -75,8 +75,8 @@ export default function RecipeReviewCard() {
           praticar esportes e minha paixão é o futebol e basquetebol. Desde meus
           15 anos trabalho e estudo, minhas maiores virtudes são a alegria,
           otimismo, aprendizagem rápida, e bom relacionamento interpessoal. Meus
-          maiores desafios é a gestão de tempo e ansiedade. Sou fã de Steve
-          Jobes e sua determinação. Meu maior sonho é ser professor e cientista
+          maiores desafios é a gestão de tempo e ansiedade. Sou fã de Steve Jobs
+          e sua determinação. Meu maior sonho é ser professor e cientista
           acadêmico em tecnologia.
           <br />
           <br />
@@ -132,23 +132,24 @@ export default function RecipeReviewCard() {
             back-end(Nodejs, PHP, Javascript). Trabalhei por entorno de 10 anos
             em empresa público entre eles atuei como diretor de IT, atuando
             deste a elaboração de projetos de infraestrutura de comunicação de
-            dados até a programação de soluções pontuais internos. Atuei na
+            dados até a programação de soluções pontuais internas. Atuei na
             coordenação de equipe na realização de projetos de redes (fibra
-            ótica, wireless e redes Cat5e e Cat6e, voip, redes de segurança).
-            Atuei como analista de dados em censo demográfico populacional.
-            Atuei como administrador de servidores windows e linux, sistemas de
-            gerenciamento como mikrotik, cacti, zabbix e webmin. Utilizo no meu
-            dia a dia soluções como Doker, Git e GitHub, Docs, Jest para testes
-            unitários e eslint. Recentemente estou focado em programar
-            utilizando as libs ReactJS, React Native e Nodejs, em banco de dados
-            utilizo o MySQL, PostGres e MongoDB. Sou fundador da Newtech
-            Tecnologia, uma emprese de consultoria e desenvolvimento de soluções
-            de informática.
+            ótica, wireless, voip e redes de segurança). Atuei como analista de
+            dados em censo demográfico populacional pelo IBGE. Atuei como
+            administrador de servidores windows e linux, sistemas de
+            distribuidos e gerenciáveis como mikrotik, cacti, zabbix e webmin.
+            Utilizo no meu dia a dia soluções como Docker, Git e GitHub, Docz,
+            Jest para testes unitários e eslint. Recentemente estou focado em
+            programar utilizando as libs ReactJS, React Native e Nodejs, e
+            frameworks AdonisJS, CMS como wordpress e em banco de dados utilizo
+            o MySQL, PostGres e MongoDB. Sou fundador da Newtech Tecnologia, uma
+            emprese de consultoria e desenvolvimento de soluções de software,
+            websites e aplicativos mobile.
           </Typography>
           <Typography paragraph align="justify">
             Sou especialista em redes e comunicação de dados e graduado em
-            tecnologia de processos gerenciais, tenho diversas certivicações e
-            participei de vários webnars e bootcamps em tecnologia.
+            tecnologia de processos gerenciais, tenho diversas certificações e
+            participei de vários webinars e bootcamps em tecnologia.
           </Typography>
         </CardContent>
       </Collapse>

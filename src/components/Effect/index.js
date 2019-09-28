@@ -5,8 +5,9 @@ import useTypewriter from 'react-typewriter-hook';
 import './effect.css';
 
 const MagicOcean = [
-  'Bem-vindo ao CODEFullStack',
-  'Neste site você encontra-rá:',
+  'Bem-vindo ao CODEfy.IT',
+  'Este blog está em desenvolvimento.',
+  'Futuramente você encontra-rá neste blog:',
   'Artigos e curiosidades sobre o mundo da programação',
   'Meus projetos realizado e em andamento',
   'Publicação de outros programadores',
@@ -19,7 +20,7 @@ const MagicOcean = [
 let index = 0;
 
 function Effect() {
-  const [magicName, setMagicName] = useState('Bem-vindo ao CODEFullStack');
+  const [magicName, setMagicName] = useState('Bem-vindo ao CODEfy.IT');
   const intervalRef = useRef({});
   const name = useTypewriter(magicName);
   useEffect(() => {
