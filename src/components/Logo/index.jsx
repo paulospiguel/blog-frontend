@@ -2,31 +2,43 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  padding: 10px 15px;
-  border: 1px solid #09d3ac;
+  div {
+    border: 1px solid #09d3ac;
+    padding: 10px 20px;
+  }
 
-  h1 {
+  strong {
     font-family: Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: calc(12px + 2vmin);
+    font-size: 1.5em;
   }
 
   b {
     color: #09d3ac;
   }
-  .slogan {
+  p {
     font-size: calc(5px + 2vmin);
     color: #09d3ac;
-    margin-left: 25px;
+    margin-left: 15px;
+  }
+
+  .red {
+    color: #fff;
+    background: red;
+    padding: 2px;
+    border-radius: 3px;
   }
 `;
 
 export default function Logo() {
   return (
     <Container>
-      <h1>
-        <b>{'<'}</b>CODEFullStack<b>{'/>'}</b>
-      </h1>
-      <p className="slogan">Knowledge</p>
+      <div>
+        <strong>
+          <b>{'<'}</b>CODEfy.<b className="red">IT</b>
+          <b>{'/>'}</b>
+        </strong>
+        <p>Knowledge</p>
+      </div>
     </Container>
   );
 }

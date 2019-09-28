@@ -12,7 +12,7 @@ const MagicOcean = [
   'Publicação de outros programadores',
   'Biografias de programadores importantes',
   'Meu perfil como programador',
-  'Meu potfólio.',
+  'Meu portfólio.',
   'E é lógico, meus contatos....',
   'Obrigado pela visita!',
 ];

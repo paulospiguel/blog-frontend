@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.footer`
+  grid-area: footer;
+
+  width: 100%;
   font-family: Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background: #333;
   display: flex;

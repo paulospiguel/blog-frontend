@@ -1,58 +1,41 @@
 import styled from 'styled-components';
 
-export const Container = styled.main`
-  display: flex;
-  flex-flow: row wrap;
-  font-weight: bold;
-  text-align: center;
-  justify-content: flex-start;
+export const Container = styled.div`
+  display: grid;
+  grid-template-rows: 10vh 80vh 10vh;
+  justify-content: space-between;
+  grid-template-areas:
+    'header header'
+    'main main'
+    'footer footer';
 
-  > * {
-    padding: 12px;
-    flex: 1 100%;
+  header {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   img {
-    height: 40vmin;
-  }
-  .App-link {
-    color: #09d3ac;
-  }
-  .message {
-    margin-top: 20px;
-    font-size: calc(10px + 2vmin);
-    font-family: 'Courier New', Courier, monospace;
-  }
-  .red {
-    color: red;
+    height: 50vmin;
+    min-height: 300px;
   }
 
-  .white {
-    color: white;
-  }
+  main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
-  .titulo-principal {
-    max-width: 580px;
-    text-align: center;
-    margin: 60px auto;
-    font-family: 'Courier New', Courier, monospace;
-    color: #fff;
-  }
-  .titulo-principal:after {
-    content: '|';
-    margin-left: 5px;
-    opacity: 1;
-    animation: pisca 0.7s infinite;
-  }
-  /* Animação aplicada ao content referente a classe *.titulo-principal* resultando num efeito de cursor piscando. */
-
-  @keyframes pisca {
-    0%,
-    100% {
-      opacity: 1;
+    .divClock {
+      display: flex;
+      margin-top: 40px;
     }
-    50% {
-      opacity: 0;
+
+    h3 {
+      color: red;
+      font-family: Ubuntu, sans-serif;
     }
   }
 `;

@@ -1,68 +1,36 @@
 import React from 'react';
-import { Link, BrowserRouter as Router } from 'react-router-dom';
 
+// import AnalogClock, { Themes } from 'react-analog-clock';
 import Effect from '../../components/Effect';
 import Clock from '../../components/Clock';
 
-import logo from '../../assets/imgFundo.png';
-
-import { Container } from './styles';
-
-import Header from '../../components/Header';
+import Logo from '../../components/Logo';
 import Footer from '../../components/Footer';
 import Social from '../../components/Social';
-
-const showScreen = false;
-const message = (
-  <h1 className="message">
-    Blog em{' '}
-    <strong id="color" className="red">
-      {' '}
-      desenvolvimento
-    </strong>
-  </h1>
-);
-const buttonAcess = (
-  <Router>
-    <Link
-      to="/"
-      style={{
-        margin: '20px',
-        background: '#09d3ac',
-        color: '#fff',
-        textDecoration: 'none',
-        padding: '5px 50px',
-      }}
-    >
-      ENTRAR
-    </Link>
-  </Router>
-);
+import image from '../../assets/imgFundo.png';
+import { Container } from './styles';
 
 export default function inConstruction() {
-  // window.onload = setInterval(mudarCor, 1000);
-  const mudarCor = () => {
-    const obj = document.getElementById('color');
-    obj.className === 'red'
-      ? obj.classList.replace('red', 'white')
-      : obj.classList.replace('white', 'red');
-  };
-
   return (
-    <>
-      <Container>
-        <Header />
-        <div>
-          <center>
-            <Clock />
-          </center>
-          <img src={logo} alt="logo" />
-          {showScreen ? buttonAcess : message}
-          <Effect />
-          <Social />
+    <Container>
+      <header>
+        <Logo />
+      </header>
+      <main>
+        <div className="divClock">
+          <Clock
+            style={{
+              position: 'absolute',
+              margin: '20px 0 0 0',
+            }}
+          />
+          {/** <AnalogClock width={150} theme={Themes.aqua} /> */}
+          <img src={image} alt="" />
         </div>
-        <Footer />
-      </Container>
-    </>
+        <Effect />
+        <Social />
+      </main>
+      <Footer />
+    </Container>
   );
 }
