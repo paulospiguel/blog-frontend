@@ -1,17 +1,17 @@
 import React from 'react';
-import { format } from 'date-fns';
-import { ptBR } from 'date-fns/locale';
+
+import TimerNow from '../Timer';
 
 import { Container } from './styles';
-
-const formatDate = format(new Date(), 'PPPP', { locale: ptBR });
 
 const Footer = () => {
   return (
     <Container>
       <h2>Paulo Roberto Spiguel</h2>
       <p style={{ color: 'gray' }}>Desenvolverdor FullStack</p>
-      <h4>{formatDate}</h4>
+      <h4>
+        <TimerNow />
+      </h4>
     </Container>
   );
 };

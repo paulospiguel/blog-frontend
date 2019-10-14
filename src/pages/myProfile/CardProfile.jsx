@@ -14,13 +14,17 @@ import { Facebook, WhatsApp, Instagram, LinkedIn } from '@material-ui/icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/fontawesome-free-brands';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Fab from '@material-ui/core/Fab';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+
+import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 
 const useStyles = makeStyles(theme => ({
   card: {
     maxWidth: '100%',
   },
   expand: {
+    color: '#fff',
     transform: 'rotate(0deg)',
     marginLeft: 'auto',
     transition: theme.transitions.create('transform', {
@@ -32,6 +36,10 @@ const useStyles = makeStyles(theme => ({
   },
   avatar: {
     backgroundColor: red[500],
+  },
+  footer: {
+    display: 'flex',
+    justifyContent: 'space-between',
   },
 }));
 
@@ -84,38 +92,52 @@ export default function RecipeReviewCard() {
         <Typography variant="alignCenter" color="textSecondary" component="p">
           <blockquote cite="">
             <h3>A frase que mais gosto</h3>
-            <p>"Quem detem o conhecimento detem o poder."</p>
+            <FontAwesomeIcon icon={faQuoteLeft} />
+            <p>
+              <i>{`"${'Quem detem o conhecimento detem o poder.'}"`}</i>
+            </p>
             <small>Thomas Hobbes</small>
           </blockquote>
         </Typography>
       </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="github">
-          <FontAwesomeIcon icon={faGithub} />
-        </IconButton>
-        <IconButton aria-label="linkedin">
-          <LinkedIn />
-        </IconButton>
-        <IconButton aria-label="facebook">
-          <Facebook />
-        </IconButton>
-        <IconButton aria-label="instagram">
-          <Instagram />
-        </IconButton>
-        <IconButton aria-label="whatsapp">
-          <WhatsApp />
-        </IconButton>
-
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
-          })}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
+      <CardActions disableSpacing className={classes.footer}>
+        <div>
+          <IconButton aria-label="github">
+            <FontAwesomeIcon icon={faGithub} />
+          </IconButton>
+          <IconButton aria-label="linkedin">
+            <LinkedIn />
+          </IconButton>
+          <IconButton aria-label="facebook">
+            <Facebook />
+          </IconButton>
+          <IconButton aria-label="instagram">
+            <Instagram />
+          </IconButton>
+          <IconButton aria-label="whatsapp">
+            <WhatsApp />
+          </IconButton>
+        </div>
+        <Fab
+          variant="extended"
+          color="primary"
+          aria-label="add"
+          className={classes.margin}
         >
-          <ExpandMoreIcon />
-        </IconButton>
+          Leia mais...
+          <IconButton
+            className={clsx(classes.expand, {
+              [classes.expandOpen]: expanded,
+            })}
+            onClick={handleExpandClick}
+            aria-expanded={expanded}
+            aria-label="show more"
+          >
+            <ExpandMoreIcon />
+          </IconButton>
+        </Fab>
+
+        {/* */}
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>

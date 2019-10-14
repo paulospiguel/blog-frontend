@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faIdCard } from '@fortawesome/free-solid-svg-icons';
+import { faIdCard, faFingerprint } from '@fortawesome/free-solid-svg-icons';
 import {
   faInstagram,
   faLinkedin,
@@ -50,7 +50,7 @@ export default function Social() {
           <FontAwesomeIcon icon={faWhatsapp} />
         </a>
         <a href="my-profile">
-          <FontAwesomeIcon icon={faIdCard} />
+          <FontAwesomeIcon icon={faFingerprint} />
         </a>
       </Router>
     </Container>

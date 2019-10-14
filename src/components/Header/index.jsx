@@ -1,8 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import DehazeIcon from '@material-ui/icons/Dehaze';
+import { makeStyles } from '@material-ui/styles';
+
+import Button from '@material-ui/core/Button';
+import AnimationMenu from '../AnimationMenu';
 import Logo from '../Logo';
-import photo from '../../assets/foto.jpeg';
+import photo from '../../assets/foto.jpg';
+
+const useStyles = makeStyles({
+  iconDrawer: {
+    color: '#fff',
+  },
+});
 
 const Container = styled.header`
   header {
@@ -17,21 +28,12 @@ const Container = styled.header`
       width: 100%;
 
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
     }
   }
   .photoProfile {
     display: flex;
     justify-content: center;
-    img {
-      margin-left: 10px;
-      margin-top: -70px;
-      background: #fff;
-      height: 100px;
-      width: 100px;
-      border-radius: 50%;
-      border-bottom: 2px solid #09d3ac;
-    }
   }
 
   .headerCard {
@@ -55,16 +57,26 @@ const Container = styled.header`
 `;
 
 export default function Header() {
+  const classes = useStyles();
+
   return (
     <Container>
       <header>
         <div className="divTop">
+          <div>
+            <Button>
+              <DehazeIcon className={classes.iconDrawer} />
+            </Button>
+          </div>
           <nav>
             <Logo />
           </nav>
         </div>
-        <div className="photoProfile">
+        {/* <div className="photoProfile">
           <img src={photo} alt="" />
+          </div> */}
+        <div className="photoProfile">
+          <AnimationMenu />
         </div>
       </header>
       <div className="headerCard">
