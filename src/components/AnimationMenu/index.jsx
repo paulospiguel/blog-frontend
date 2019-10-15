@@ -14,19 +14,13 @@ import photo from '../../assets/foto.jpg';
 import { Container } from './styles';
 
 export default function AnimationMenu() {
-  const mouseMenu = () => {
-    document.querySelector('.circle-photo').classList.toggle('open');
-    document.querySelector('.circle-menu a').classList.toggle('menuOpen');
-    console.log();
-  };
-  const handleMenu = e => {
-    e.preventDefault();
-    // document.querySelector('.circle').classList.toggle('open');
+  const handleMenu = () => {
+    document.querySelector('.circle').classList.toggle('menuOpen');
   };
 
   return (
-    <Container>
-      <nav className="circle-menu">
+    <Container onMouseLeave={handleMenu}>
+      <nav className="circle-menu" onMouseEnter={handleMenu}>
         <div className="circle">
           <a href="">
             <FontAwesomeIcon icon={faHome} />
@@ -46,9 +40,9 @@ export default function AnimationMenu() {
           <a href="">
             <FontAwesomeIcon icon={faInstagram} />
           </a>
-        </div>
-        <div className="circle-photo" onMouseEnter={mouseMenu}>
-          <img src={photo} alt="" />
+          <div className="circle-photo">
+            <img src={photo} alt="" />
+          </div>
         </div>
       </nav>
     </Container>

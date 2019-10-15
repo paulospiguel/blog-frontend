@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { useDispatch } from 'react-redux';
 
 import DehazeIcon from '@material-ui/icons/Dehaze';
 import { makeStyles } from '@material-ui/styles';
@@ -58,13 +59,18 @@ const Container = styled.header`
 
 export default function Header() {
   const classes = useStyles();
+  const dispatch = useDispatch();
+
+  const handleOpen = () => {
+    dispatch({ type: 'TOOGLE_DRAWER', open: true });
+  };
 
   return (
     <Container>
       <header>
         <div className="divTop">
           <div>
-            <Button>
+            <Button onClick={handleOpen}>
               <DehazeIcon className={classes.iconDrawer} />
             </Button>
           </div>

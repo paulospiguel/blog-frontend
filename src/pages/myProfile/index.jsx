@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from './styles';
 
 import Header from '../../components/Header';
-import Draw from '../../components/Draw';
+import Drawer from '../../components/Drawer';
 import TitlePage from '../../components/TitlePage';
 import CardProfile from './CardProfile';
 import Footer from '../../components/Footer';
